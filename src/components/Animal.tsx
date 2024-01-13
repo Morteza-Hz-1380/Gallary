@@ -12,7 +12,7 @@ const Animals = () => {
     const fetchPhotos = async () => {
       try {
         const response = await axios.get(
-          "https://api.pexels.com/v1/search?query=animal",
+          "https://api.pexels.com/v1/search?query=animal&per_page=1000",
           {
             headers: {
               Authorization: "KMvCjoI1mNXSAaA61SOZLO9XExhMqOFwnvWHxDwTFYmb1mLGXBRp4pLA",

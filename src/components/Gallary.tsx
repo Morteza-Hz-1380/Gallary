@@ -12,7 +12,7 @@ const Gallary = () => {
     const fetchPhotos = async () => {
       try {
         const response = await axios.get(
-          "https://api.pexels.com/v1/curated?page=2&per_page=1000",
+          "https://api.pexels.com/v1/curated?page=1&page=2&page=3&page=4&page=5&per_page=1000",
           {
             headers: {
               Authorization: "KMvCjoI1mNXSAaA61SOZLO9XExhMqOFwnvWHxDwTFYmb1mLGXBRp4pLA",

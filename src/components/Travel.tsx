@@ -12,7 +12,7 @@ const Travel = () => {
     const fetchPhotos = async () => {
       try {
         const response = await axios.get(
-          "https://api.pexels.com/v1/search?query=travel",
+          "https://api.pexels.com/v1/search?query=travel&per_page=1000",
           {
             headers: {
               Authorization: "KMvCjoI1mNXSAaA61SOZLO9XExhMqOFwnvWHxDwTFYmb1mLGXBRp4pLA",
