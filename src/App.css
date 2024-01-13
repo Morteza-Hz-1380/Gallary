@@ -39,6 +39,7 @@ a {
 
 a:hover {
   color: #b6b6b6;
+  text-shadow: rgb(177, 174, 174) 0 0 10px;
 }
 li:hover {
   scale: 2;
