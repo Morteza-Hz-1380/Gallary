@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Photo from "./photo";
+import Photo from "./Photo";
 import axios from "axios";
 import './Gallary.css';
 
