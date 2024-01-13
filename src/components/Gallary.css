@@ -53,3 +53,27 @@ input {
     width: 500px;
 }
 
+/*media query for 375px and 768 */
+
+@media only screen and (max-width: 400px) {
+    input{
+        width: 300px;
+        font-size: 14px;
+    }
+    .search{
+        margin-left: -170px;
+    }
+    .gallary{
+        gap: 20px;
+        margin-top: 50px;
+        flex-direction: column;
+        /* width: 200px; */
+        margin-left:-185px;
+    }
+}
+
+@media only screen and (max-width: 770px){
+    .search{
+        margin-left: -270px;
+    }
+}

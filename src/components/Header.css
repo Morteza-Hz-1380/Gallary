@@ -18,7 +18,36 @@ p{
 }
 
 p:hover{
-    scale: 2;
+    scale: 1.8;
     transition: 0.5s;
     cursor: pointer;
+}
+
+/* media query for 375px and 768 */
+
+@media only screen and (max-width: 400px) {
+    .dark{
+        height: 300px;
+        background-size: 500px;
+    }
+    p{
+        font-size: 20px;
+        margin-left: 30%;
+        margin-top: 35%;
+    }
+}
+
+
+@media only screen and (max-width: 770px){
+    .dark{
+        height: 350px;
+    }
+    p{
+        font-size: 30px;
+        margin-left: 33%;
+        margin-top: 20%;
+    }
+p:hover{
+    scale: 1.4;
+}
 }
