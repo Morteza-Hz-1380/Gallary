@@ -58,6 +58,7 @@ input:focus{
     outline: none;
     border: 2px solid rgb(21, 56, 212);
     box-shadow:  0px 0px 10px rgb(21, 56, 212);
+    transition: 0.5s;
 }
 /*media query for 375px and 768 */
 
