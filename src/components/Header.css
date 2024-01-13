@@ -1,54 +1,55 @@
 .dark {
-    position: relative;
+  position: relative;
   background: url(../assets/header.jpg) no-repeat;
   background-size: cover;
   height: 900px;
   text-align: center;
-  border-bottom-left-radius: 20px ;
-  border-bottom-right-radius: 20px ;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-p{
-    position: absolute;
-    background: transparent;
-    margin-left: 40%;
-    margin-top: 18%;
-    font-size: 40px;
-    color: rgb(139, 136, 136);
-    text-shadow: 0 0 5px #252424, 0 0 10px #383737, 0 0 15px #272626, 0 0 20px #000000, 0 0 30px #ada9a9, 0 0 40px #c6c9c4, 0 0 55px #b8b8b8, 0 0 75px #282b27;
-font-size: 60px;
+p {
+  position: absolute;
+  background: transparent;
+  margin-left: 40%;
+  margin-top: 18%;
+  font-size: 40px;
+  color: rgb(139, 136, 136);
+  text-shadow: 0 0 5px #252424, 0 0 10px #383737, 0 0 15px #272626,
+    0 0 20px #000000, 0 0 30px #ada9a9, 0 0 40px #c6c9c4, 0 0 55px #b8b8b8,
+    0 0 75px #282b27;
+  font-size: 60px;
 }
 
-p:hover{
-    scale: 1.5;
-    transition: 0.5s;
-    cursor: pointer;
+p:hover {
+  scale: 1.5;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 /* media query for 375px and 768 */
 
 @media only screen and (max-width: 400px) {
-    .dark{
-        height: 300px;
-        background-size: 500px;
-    }
-    p{
-        font-size: 20px;
-        margin-left: 30%;
-        margin-top: 35%;
-    }
+  .dark {
+    height: 300px;
+    background-size: 500px;
+  }
+  p {
+    font-size: 20px;
+    margin-left: 30%;
+    margin-top: 35%;
+  }
 }
 
-
-@media only screen and (max-width: 770px){
-    .dark{
-        height: 350px;
-    }
-    p{
-        font-size: 30px;
-        margin-left: 33%;
-        margin-top: 20%;
-    }
-p:hover{
+@media only screen and (max-width: 770px) {
+  .dark {
+    height: 350px;
+  }
+  p {
+    font-size: 30px;
+    margin-left: 33%;
+    margin-top: 20%;
+  }
+  p:hover {
     scale: 1.4;
-}
+  }
 }

@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import Photo from "./Photo";
 import axios from "axios";
-import './Gallary.css';
+import "./Gallery.css";
 
 const People = () => {
   const [photos, setPhotos] = useState([]);
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState("");
   const [filteredPhotos, setFilteredPhotos] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,8 @@ const People = () => {
           "https://api.pexels.com/v1/search?query=people&per_page=1000",
           {
             headers: {
-              Authorization: "KMvCjoI1mNXSAaA61SOZLO9XExhMqOFwnvWHxDwTFYmb1mLGXBRp4pLA",
+              Authorization:
+                "KMvCjoI1mNXSAaA61SOZLO9XExhMqOFwnvWHxDwTFYmb1mLGXBRp4pLA",
             },
           }
         );
@@ -39,8 +40,9 @@ const People = () => {
     setFilteredPhotos(filtered);
   };
 
-  return (<>
-   <div className="search"> 
+  return (
+    <>
+      <div className="search">
         <input
           type="text"
           placeholder="Search People..."
@@ -48,13 +50,13 @@ const People = () => {
           onChange={handleSearch}
         />
       </div>
-    <div className="gallary">
-      {filteredPhotos.map((photo) => (
-        <div className="photo" key={photo.id}>
-          <Photo photo={photo} />
-        </div>
-      ))}
-    </div>
+      <div className="gallary">
+        {filteredPhotos.map((photo) => (
+          <div className="photo" key={photo.id}>
+            <Photo photo={photo} />
+          </div>
+        ))}
+      </div>
     </>
   );
 };

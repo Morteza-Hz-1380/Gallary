@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import Photo from "./Photo";
 import axios from "axios";
-import './Gallary.css';
+import "./Gallery.css";
 
-const Gallery = () => {
+const Gallry = () => {
   const [photos, setPhotos] = useState([]);
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState("");
   const [filteredPhotos, setFilteredPhotos] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,8 @@ const Gallery = () => {
           "https://api.pexels.com/v1/curated?page=1&page=2&page=3&page=4&page=5&per_page=1000",
           {
             headers: {
-              Authorization: "KMvCjoI1mNXSAaA61SOZLO9XExhMqOFwnvWHxDwTFYmb1mLGXBRp4pLA",
+              Authorization:
+                "KMvCjoI1mNXSAaA61SOZLO9XExhMqOFwnvWHxDwTFYmb1mLGXBRp4pLA",
             },
           }
         );
@@ -39,8 +40,9 @@ const Gallery = () => {
     setFilteredPhotos(filtered);
   };
 
-  return (<>
-   <div className="search"> 
+  return (
+    <>
+      <div className="search">
         <input
           type="text"
           placeholder="Search photographer..."
@@ -48,15 +50,15 @@ const Gallery = () => {
           onChange={handleSearch}
         />
       </div>
-    <div className="gallary">
-      {filteredPhotos.map((photo) => (
-        <div className="photo" key={photo.id}>
-          <Photo photo={photo} />
-        </div>
-      ))}
-    </div>
+      <div className="gallary">
+        {filteredPhotos.map((photo) => (
+          <div className="photo" key={photo.id}>
+            <Photo photo={photo} />
+          </div>
+        ))}
+      </div>
     </>
   );
 };
 
-export default Gallery;
+export default Gallry;
