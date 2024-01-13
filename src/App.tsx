@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import Gallary from "./components/Gallery";
+import Gallery from "./components/Gallery";
 import Animal from "./components/Animal";
 import Nature from "./components/Nature";
 import People from "./components/People";
@@ -38,7 +38,7 @@ function App() {
           </nav>
 
           <Routes>
-            <Route path="/" element={<Gallary />} />
+            <Route path="/" element={<Gallery />} />
             <Route path="/animal" element={<Animal />} />
             <Route path="/nature" element={<Nature />} />
             <Route path="/people" element={<People />} />

@@ -3,7 +3,7 @@ import Photo from "./Photo";
 import axios from "axios";
 import './Gallary.css';
 
-const Gallary = () => {
+const Gallery = () => {
   const [photos, setPhotos] = useState([]);
   const [searchInput, setSearchInput] = useState('');
   const [filteredPhotos, setFilteredPhotos] = useState([]);
@@ -59,4 +59,4 @@ const Gallary = () => {
   );
 };
 
-export default Gallary;
+export default Gallery;
