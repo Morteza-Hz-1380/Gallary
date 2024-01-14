@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Photo from "./Photo";
 import axios from "axios";
-import "./Gellary.css";
+import "./Gallery.css";
 
 const Travel = () => {
   const [photos, setPhotos] = useState([]);
@@ -52,7 +52,7 @@ const Travel = () => {
       </div>
       <div className="gallary">
         {filteredPhotos.map((photo) => (
-          <div className="photo" key={photo.id}>
+          <div className="img" key={photo.id}>
             <Photo photo={photo} />
           </div>
         ))}

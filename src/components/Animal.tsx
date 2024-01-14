@@ -52,7 +52,7 @@ const Animals = () => {
       </div>
       <div className="gallary">
         {filteredPhotos.map((photo) => (
-          <div className="photo" key={photo.id}>
+          <div className="img" key={photo.id}>
             <Photo photo={photo} />
           </div>
         ))}

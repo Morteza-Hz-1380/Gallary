@@ -12,7 +12,7 @@ const Nature = () => {
     const fetchPhotos = async () => {
       try {
         const response = await axios.get(
-          "https://api.pexels.com/v1/search?query=nature&per_page=1000",
+          "https://api.pexels.com/v1/search?query=jungle&per_page=1000",
           {
             headers: {
               Authorization:
@@ -52,7 +52,7 @@ const Nature = () => {
       </div>
       <div className="gallary">
         {filteredPhotos.map((photo) => (
-          <div className="photo" key={photo.id}>
+          <div className="img" key={photo.id}>
             <Photo photo={photo} />
           </div>
         ))}
