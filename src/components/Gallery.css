@@ -59,6 +59,11 @@ input:focus {
     transition: 0.5s;
 }
 
+li{
+
+cursor: pointer;
+}
+
 /* Media query for 400px and 770px */
 @media only screen and (max-width: 400px) {
     input {

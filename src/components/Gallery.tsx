@@ -3,16 +3,17 @@ import Photo from "./Photo";
 import axios from "axios";
 import "./Gallery.css";
 
-const Gallry = () => {
+const Gallery = () => {
   const [photos, setPhotos] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [filteredPhotos, setFilteredPhotos] = useState([]);
+  const [gallery, setGallery] = useState("All");
 
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
         const response = await axios.get(
-          "https://api.pexels.com/v1/curated?page=1&page=2&page=3&page=4&page=5&per_page=1000",
+          `https://api.pexels.com/v1/search?query=${gallery}&per_page=1000`,
           {
             headers: {
               Authorization:
@@ -27,7 +28,7 @@ const Gallry = () => {
       }
     };
     fetchPhotos();
-  }, []);
+  }, [gallery]); // Include gallery in the dependency array
 
   const handleSearch = (event) => {
     const searchTerm = event.target.value;
@@ -42,6 +43,18 @@ const Gallry = () => {
 
   return (
     <>
+      <div className="App">
+        <nav>
+          <ul>
+            <li onClick={() => setGallery("All")}>Gallery</li>
+            <li onClick={() => setGallery("Animal")}>Animal</li>
+            <li onClick={() => setGallery("Jungle")}>Nature</li>
+            <li onClick={() => setGallery("Human")}>People</li>
+            <li onClick={() => setGallery("Car")}>Car</li>
+            <li onClick={() => setGallery("Travel")}>Travel</li>
+          </ul>
+        </nav>
+      </div>
       <div className="search">
         <input
           type="text"
@@ -61,4 +74,4 @@ const Gallry = () => {
   );
 };
 
-export default Gallry;
+export default Gallery;
