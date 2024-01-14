@@ -6,6 +6,7 @@
   text-align: center;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 254, 254, 0.5);
 }
 p {
   position: absolute;

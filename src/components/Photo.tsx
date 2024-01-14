@@ -1,7 +1,7 @@
 const Photo = ({ photo }) => {
   return (
-    <div className="photo">
-      <img src={photo.src.medium} alt={photo.photographer} />
+    <div >
+      <img src={photo.src.large} alt={photo.photographer} />
       {photo.photographer}
     </div>
   );

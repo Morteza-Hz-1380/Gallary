@@ -52,6 +52,7 @@ const Gallery = () => {
             <li onClick={() => setGallery("Human")}>People</li>
             <li onClick={() => setGallery("Car")}>Car</li>
             <li onClick={() => setGallery("Travel")}>Travel</li>
+            <li onClick={() => setGallery("Camera")}>Camera</li>
           </ul>
         </nav>
       </div>
