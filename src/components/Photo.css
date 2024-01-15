@@ -1,0 +1,57 @@
+
+.opacity {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.opacity:hover {
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+.opacity:hover h3,
+.opacity:hover button {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+button {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  opacity: 0; /* initially hidden */
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1;
+}
+h3 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  opacity: 0; /* initially hidden */
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1;
+  font-size: 30px;
+  margin: 0;
+  color: #fff;
+  text-shadow: 4px 4px 8px rgba(2, 2, 2, 0.5);
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}

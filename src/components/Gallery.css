@@ -23,8 +23,9 @@ body {
   flex: 0 1 calc(33.33% - 16px);
   border-radius: 10px;
   overflow: hidden;
-  /* border: 2px solid rgb(122, 118, 118); */
+  border: 2px solid rgb(122, 118, 118);
   height: auto;
+  object-fit: cover;
 }
 
 .img:hover {
@@ -36,8 +37,9 @@ body {
 
 .img img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 input {
@@ -45,7 +47,7 @@ input {
   border-radius: 10px;
   padding: 30px;
   padding-left: 40px;
-  font-size: 24px;
+  font-size: 20px;
   color: rgb(255, 255, 255);
   background-color: black;
   margin-left: 32%;
