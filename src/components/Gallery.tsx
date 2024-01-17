@@ -10,13 +10,14 @@ const Gallery = () => {
   const [searchInput, setSearchInput] = useState("");
   const [filteredPhotos, setFilteredPhotos] = useState([]);
   const [gallery, setGallery] = useState("All");
+  const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
     AOS.init();
     const fetchPhotos = async () => {
       try {
         const response = await axios.get(
-          `https://api.pexels.com/v1/search?query=${gallery}&per_page=1000`,
+          `https://api.pexels.com/v1/search?query=${gallery}&page=${pageNumber}&per_page=9`,
           {
             headers: {
               Authorization:
@@ -31,7 +32,7 @@ const Gallery = () => {
       }
     };
     fetchPhotos();
-  }, [gallery]); // Include gallery in the dependency array
+  }, [gallery, pageNumber]); // Include gallery in the dependency array
 
   const handleSearch = (event) => {
     const searchTerm = event.target.value;
@@ -42,6 +43,13 @@ const Gallery = () => {
       photo.photographer.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredPhotos(filtered);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 900,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -68,11 +76,37 @@ const Gallery = () => {
       </div>
       <div className="gallary">
         {filteredPhotos.map((photo) => (
-          <div data-aos="zoom-out" data-aos-delay="300" className="img" key={photo.id}>
+          <div
+            data-aos="zoom-out"
+            data-aos-delay="300"
+            className="img"
+            key={photo.id}
+          >
             <Photo photo={photo} />
           </div>
         ))}
       </div>
+      <ul className="page">
+        <li
+          className="pagebutton"
+          onClick={() => {
+            setPageNumber(pageNumber > 1 ? pageNumber - 1 : 1);
+            scrollToTop();
+          }}
+        >
+          Prev
+        </li>
+        <li className="pageNumber">{pageNumber}</li>
+        <li
+          className="pagebutton"
+          onClick={() => {
+            setPageNumber(pageNumber + 1);
+            scrollToTop();
+          }}
+        >
+          Next
+        </li>
+      </ul>
     </>
   );
 };

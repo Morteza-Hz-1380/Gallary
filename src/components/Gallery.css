@@ -81,6 +81,28 @@ li:hover {
   cursor: pointer;
   text-shadow: 0 0 4px rgb(0, 0, 0), 0 0 6px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0);
 }
+
+.pagebutton {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.pageNumber {
+  padding: 10px 0;
+}
+
+.pagebutton:hover {
+  color: aqua;
+  transition: 0.5s;
+  cursor: pointer;
+  text-shadow: 0 0 4px rgb(0, 0, 0), 0 0 6px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0);
+}
+
+.page {
+  gap: 20px;
+}
+
 /* Add me media query for my code  */
 
 @media only screen and (max-width: 600px) {

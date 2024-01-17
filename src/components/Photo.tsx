@@ -1,5 +1,6 @@
 import './Photo.css';
 
+
 const Photo = ({ photo }) => {
   const handleDownload = () => {
     // Fetch the image data
