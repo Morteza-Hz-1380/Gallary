@@ -6,7 +6,7 @@
   margin: 0 auto;
   padding: 20px;
 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   border-radius: 5px;
   overflow: hidden;
 }
@@ -42,36 +42,9 @@ a:hover {
   text-shadow: rgb(174, 175, 177) 0 0 10px;
 }
 li:hover {
-  scale: 2;
+  scale: 1.2;
   transition: 0.5s;
 }
   
 
-/*media query for 400px and 768px */
 
-@media only screen and (max-width: 400px) {
-  ul {
-    flex-direction: row;
-    gap: 20px;
-  }
-  a{
-    font-size: 14px;
-  }
-  nav{
-    margin-top: -50px;
-  }
-  li:hover{
-    scale: 1.2;
-  }
-}
-@media only screen and (max-width: 770px){
-  a{
-    font-size: 18px;
-  }
- ul{
-  gap: 80px;
- } 
- li:hover{
-  scale: 1.5;
- }
-}

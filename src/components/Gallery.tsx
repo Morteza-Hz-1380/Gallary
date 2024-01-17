@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Photo from "./Photo";
 import axios from "axios";
 import "./Gallery.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Gallery = () => {
   const [photos, setPhotos] = useState([]);
@@ -10,6 +12,7 @@ const Gallery = () => {
   const [gallery, setGallery] = useState("All");
 
   useEffect(() => {
+    AOS.init();
     const fetchPhotos = async () => {
       try {
         const response = await axios.get(
@@ -52,7 +55,6 @@ const Gallery = () => {
             <li onClick={() => setGallery("Human")}>People</li>
             <li onClick={() => setGallery("Car")}>Car</li>
             <li onClick={() => setGallery("Travel")}>Travel</li>
-            <li onClick={() => setGallery("Camera")}>Camera</li>
           </ul>
         </nav>
       </div>
@@ -66,7 +68,7 @@ const Gallery = () => {
       </div>
       <div className="gallary">
         {filteredPhotos.map((photo) => (
-          <div className="img" key={photo.id}>
+          <div data-aos="zoom-out" data-aos-delay="300" className="img" key={photo.id}>
             <Photo photo={photo} />
           </div>
         ))}
